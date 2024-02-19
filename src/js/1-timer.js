@@ -76,7 +76,6 @@ const timer = {
     this.intervalId = setInterval(() => {
       const currentTime = Date.now();
       const deltaTime = startTime - currentTime;
-      console.log(deltaTime);
       const time = convertMs(deltaTime);
       spanDays.textContent = time.days;
       spanHours.textContent = time.hours;
@@ -86,7 +85,8 @@ const timer = {
       if (deltaTime <= 1000) {
         clearInterval(this.intervalId);
       this.isActive = false;
-      }
+      
+    }
     }, 1000);
   },
   
