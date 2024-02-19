@@ -77,6 +77,7 @@ const timer = {
       const currentTime = Date.now();
       const deltaTime = startTime - currentTime;
       const time = convertMs(deltaTime);
+      console.log(deltaTime);
       spanDays.textContent = time.days;
       spanHours.textContent = time.hours;
       spanMinutes.textContent = time.minutes;
